@@ -1,487 +1,87 @@
-# Описание разметки файла README.md
-Для описания проектов на GitHub используется README.md, который пишется на языке разметки markdown. Что и как поддерживается расписано ниже. Также существует еще один формат - [reStructuredText](https://github.com/GnuriaN/format-README/blob/master/README.rst), описание которого вынесено в отдельный файл `README.rst`.
+<h1 align="center">Hi, guys! <img src="https://github.com/wervlad/wervlad/assets/24524555/766d336d-b87d-44ba-807c-c51de2bc6b4d" width="28px" alt="👋"></h1>
 
-## Оглавление
+<p align="center">
+    <b>Welcome to my page!</b><br><br>
+    <i>
+        I'm Vladimir.<br>
+        Currently learning to walk in ML/DL without falling on my bottom.<br>
+        Open to collaborating on interesting and innovative projects.<br>
+    </i><br>
+    <a href="https://www.linkedin.com/in/wervlad">
+        <img src="https://img.shields.io/badge/LinkedIn-blue?style=flat-square&logo=linkedin" alt="LinkedIn">
+    </a>
+    <a href="https://www.kaggle.com/wervlad">
+        <img src="https://img.shields.io/badge/Kaggle-blue?style=flat-square&logo=kaggle" alt="Kaggle">
+    </a>
+    <a href="https://stepik.org/users/108517510">
+        <img src="https://img.shields.io/badge/Stepik-blue?style=flat-square&logo=image%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA2ADYANhLVLGJAAAACXBIWXMAAAsTAAALEwEAmpwYAAADNUlEQVRIx8VWPU/rSBS9NsRPyMZGfGQLhDWKiKVoBVIKChAEKamo+QOvfQXFSm5AiJJ2ixVe0RCFKpaslKZZUbwmWCBRGShoKB1LSAEl8WKTs1WsOB/w3ha7V5rCY8/xnTP3nDtEH4QgCHOqqj5IkgSe50FEICLwPA9JkqCq6oMgCHP0b4IxdphKpb73QMeNVCr1nTF2+FPgmUzGFEURn4H3hiiKyGQy5iisif6H5eXlL7Is/9FoNL62Wq14nud5KhaLtLu7SxsbGzQ1NUVPT08EgIiIwjCkt7e3XxcXF3+Zn5//6/n5+X0cLYYsy3FmHMeBiGAYBlzXRRRFiKIIruvi9PQUMzMziZ3IsgzGmPFTtNRqNbTbbQzG2dkZJEn6MboYY4eD4NlsFqZpIggCAEAURfB9H57nwbZtZLPZD88kPnhBEOb6q6VHi2ma6HQ6MXi9Xsfm5mb8TT6fh67r0HUdS0tLI6tLEIQ5UlX1YRQtvcy73S4cx0GhUAARgTGGarUKz/PQbDbRbDbheR5OTk6GfqKq6gMpipIQkGEYMedRFMFxHORyORARNE2DZVkYFe12G4ZhJASpKAqof6JUKsF13QQtvczT6TRs206A3tzc4P7+HmEYAgBc10WpVEokTP1b0nUdURQBAHzfjznXNA22bcfvAMCyLKytrWFrawu+7wMAWq0W9vb2EjTxn6l6ZWWFjo+PaWdnhyYmJuj9/Z0uLi7o4OCArq+vY7GNjXEUhWGIu7s7XF1dJWixbRvpdBpEhEKhgHq9Hu9sJEX9YuE4DuVyOa6gwbAsC5qmgYiQy+XgOE4MPvaQR5VppVJBo9HAy8sLXl9f4XkeqtUqGGNx5o7joNvtAgCCIECtVhtdpuOEtrq6iv39fRwdHWF7eztetL6+nqCl0+nANM3E2oTQxlnFoG3Ytg3P8+D7fgweBAFM0xyyjYRVfGZ209PTqFQqQ+cxjpaPesOQXRMRZmdncX5+PmTX5XJ5iJZRds0NNpwoin73ff9bf8PhOI6KxSLl83kiIrq9vaXLy8uEBkRRpIWFhT8nJyd/e3x8/Ps/a5n/T9MfvLYoijJ0bVEU5YeuLf8A/blSgAQ62zgAAAAASUVORK5CYII=" alt="Stepik">
+    </a>
+    <a href="https://leetcode.com/wervlad">
+        <img src="https://img.shields.io/badge/LeetCode-blue?style=flat-square&logo=LeetCode" alt="LeetCode">
+    </a>
+</p>
 
-0. [Разделительная черта](#Разделительная-черта)
-1. [Заголовки](#Заголовки)
-2. [Работа с выделением текста](#Работа-с-выделением-текста)
-3. [Использование эмодзи (emoji)](#Использование-эмодзи-emoji)
-4. [Использование цитирования в тексте](#Использование-цитирования-в-тексте)
-5. [Подсветка кода](#Подсветка-кода)
-6. [Списки](#Списки)
-    1. [Маркированный](#Маркированный)
-    2. [Нумерованный](#Нумерованный)
-    3. [Смешанные списки](#Смешанные-списки)
-    4. [Список задач](#Список-задач)
-7. [Ссылки](#Ссылки)
-8. [Вставка изображения](#Вставка-изображения)
-9. [Вставка таблиц](#Вставка-таблиц)
-10. [Диаграмм Mermaid.js](#диаграмм-mermaidjs)
-11. [Дополнения](https://github.com/GnuriaN/format-README/blob/master/Дополнения.md)
-    
-## Разделительная черта
-При использовании
-```
-____
-```
-получается разделительная черта
-____
-[:arrow_up:Оглавление](#Оглавление)
-___
-## Заголовки
+### Languages
+[![Python](https://img.shields.io/badge/python-black?style=for-the-badge&logo=python)](https://github.com/wervlad)
+[![JavaScript](https://img.shields.io/badge/javascript-black?style=for-the-badge&logo=javascript)](https://github.com/wervlad)
+[![Java](https://img.shields.io/badge/java-black?style=for-the-badge&logo=openjdk)](https://github.com/wervlad)
+[![Clojure](https://img.shields.io/badge/clojure-black?style=for-the-badge&logo=clojure)](https://github.com/wervlad)
+[![C++](https://img.shields.io/badge/c++-black?style=for-the-badge&logo=cplusplus)](https://github.com/wervlad)
+[![C](https://img.shields.io/badge/c-black?style=for-the-badge&logo=c)](https://github.com/wervlad)
+[![Bash](https://img.shields.io/badge/bash-black?style=for-the-badge&logo=gnu-bash&logoColor=white)](https://github.com/wervlad)
+[![SQL](https://img.shields.io/badge/sql-black?style=for-the-badge&logo=mysql)](https://github.com/wervlad)
 
-Всего существует шесть уровней заголовков. Для того, чтобы создать заголовок, необходимо в начале строки добавить символы `#`, в количестве равном его уровню.
-____
-# Заголовок первого уровня
-```
-# Заголовок 1
-```
-Заголовок первого уровня также можно создать:
-```
-Заголовок 1
-===========
-```
-____
-## Заголовок второго уровня
-```
-## Заголовок 2
-```
-Заголовок второго уровня также можно создать:
-```
-Заголовок 2
------------
-```
-____
-### Заголовок третьего уровня
-```
-### Заголовок 3
-```
-____
-#### Заголовок четвертого уровня
-```
-#### Заголовок 4
-```
-____
-##### Заголовок пятого уровня
-```
-##### Заголовок 5
-```
-____
-###### Заголовок шестого уровня
-```
-###### Заголовок 6
-```
-____
-[:arrow_up:Оглавление](#Оглавление)
-____
-## Работа с выделением текста
+### ML/DL
+[![Pandas](https://img.shields.io/badge/pandas-black?style=for-the-badge&logo=pandas)](https://github.com/wervlad)
+[![NumPy](https://img.shields.io/badge/numpy-black?style=for-the-badge&logo=numpy)](https://github.com/wervlad)
+[![MLFlow](https://img.shields.io/badge/mlflow-black?style=for-the-badge&logo=numpy&logoColor=blue)](https://github.com/wervlad)
+[![Scikit-Learn](https://img.shields.io/badge/scikit--learn-black?style=for-the-badge&logo=scikit-learn)](https://github.com/wervlad)
+[![PyTorch](https://img.shields.io/badge/PyTorch-black?style=for-the-badge&logo=PyTorch)](https://github.com/wervlad)
+[![SciPy](https://img.shields.io/badge/SciPy-black?style=for-the-badge&logo=scipy)](https://github.com/wervlad)
+[![Matplotlib](https://img.shields.io/badge/Matplotlib-black?style=for-the-badge&logo=image%2Fpng%3Bbase64%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)](https://github.com/wervlad)
 
-```
-~~Зачеркнутый текст~~
-```
-~~Зачеркнутый текст (Strikethrough)~~
+### Technologies & Frameworks
+[![Django](https://img.shields.io/badge/django-black?style=for-the-badge&logo=django)](https://github.com/wervlad)
+[![React](https://img.shields.io/badge/react-black?style=for-the-badge&logo=react)](https://github.com/wervlad)
+[![HTML5](https://img.shields.io/badge/html5-black?style=for-the-badge&logo=html5)](https://hub.docker.com/u/wervlad)
+[![CSS3](https://img.shields.io/badge/css3-black?style=for-the-badge&logo=css3)](https://hub.docker.com/u/wervlad)
+[![Docker](https://img.shields.io/badge/docker-black?style=for-the-badge&logo=docker)](https://hub.docker.com/u/wervlad)
 
-Для выделения текста **`жирным`** или *`наклонным`* и их сочетания можно использовать комбинации `*` или `_`
+### OS
+[![Linux](https://img.shields.io/badge/linux-black?style=for-the-badge&logo=Linux)](https://github.com/wervlad)
+[![Windows](https://img.shields.io/badge/Windows-black?style=for-the-badge&logo=Windows)](https://github.com/wervlad)
+[![FreeBSD](https://img.shields.io/badge/FreeBSD-black?style=for-the-badge&logo=FreeBSD)](https://github.com/wervlad)
 
-```
-**Жирный текст (bold)**
-```
-**Жирный текст (bold)**
+<details>
+<p align="center">
+  <a href="https://github.com/wervlad">
+    <img src="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=wervlad&theme=transparent" />
+  </a>
+  <a href="https://github.com/wervlad">
+    <img src="https://github-readme-streak-stats.herokuapp.com/?user=wervlad&hide_border=true&card_width=338&theme=transparent" />
+  </a>
+  <a href="https://github.com/wervlad">
+    <img src="http://github-profile-summary-cards.vercel.app/api/cards/stats?username=wervlad&theme=transparent" />
+  </a>
+  <a href="https://github.com/wervlad">
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=wervlad&langs_count=10&exclude_repo=&hide=jupyter%20notebook,vim%20script,cmake,makefile,batchfile,emacs%20lisp,css,html&layout=default&card_width=699&hide_border=true&theme=transparent" />
+  </a>
+</p>
+</details>
 
-```
-*Наклонный текст (italic)*
-```
-*Наклонный текст (italic)*
+<p align="center">
+  <a href="https://github.com/wervlad">
+    <img src="https://komarev.com/ghpvc/?username=wervlad&color=blue&style=flat)" />
+  </a>
+</p>
+<!--
 
-```
-***Жирный наклонный текст (bold italic)***
-```
-***Жирный наклонный текст (bold italic)***
-
-```
-__Жирный текст (bold)__
-```
-__Жирный текст (bold)__
-
-```
-_Наклонный текст (italic)_
-```
-_Наклонный текст (italic)_
-
-```
-___Жирный наклонный текст (bold italic)___
-```
-___Жирный наклонный текст (bold italic)___
-
-```
-~~*__Тут странный текст__*~~
-```
-~~*__Тут странный текст__*~~
-    
-[:arrow_up:Оглавление](#Оглавление)
-____
-## Использование эмодзи (emoji)
-В самом тексте можно использовать эмодзи, например написать вот так:    
-:white_check_mark: Это уже сделано    
-:negative_squared_cross_mark: Я не буду это делать    
-:black_square_button: делать или не делать, вот в чем вопрос?    
-В оригинале это выглядит так (в конце строки четыре (4) пробела для того, что бы был переход на новую строку):
-```
-:white_check_mark: Это уже сделано    
-:negative_squared_cross_mark: Я не буду это делать    
-:black_square_button: делать или не делать, вот в чем вопрос?    
-```
-
-Список работающих Эмодзи находится тут -> [emoji.md](https://github.com/GnuriaN/format-README.md/blob/master/emoji.md)    
-    
-[:arrow_up:Оглавление](#Оглавление)
-___
-## Использование цитирования в тексте
-```
-> Цитата (уровень 1)    
-> > Вложенная цитата (уровень 2)    
-> > > Вложенная цитата (уровень 3)    
-
-> > Продолжение цитаты (уровень 2)    
-
-> Продолжение цитаты (уровень 1)    
-```
-> Цитата (уровень 1)    
-> > Вложенная цитата (уровень 2)    
-> > > Вложенная цитата (уровень 3)    
-
-> > Продолжение цитаты (уровень 2)    
-
-> Продолжение цитаты (уровень 1)    
-
-Внешний вид, конечно, не очень, но может и пригодиться.
-
-[:arrow_up:Оглавление](#Оглавление)
-___
-## Подсветка кода
-
-Если нужно выделить слово или фразу внутри строки, то используются одинарные обратные кавычки (`):
-
-    Это `слово` будет выделено
-
-Для выделения в блоки - тройные:
-
-    ```
-        Здесь может быть
-        Ваша реклама
-    ```
-
-Дополнительно можно задавать язык кода внутри блока, указав его после первых трех кавычек:
-
-    ```html
-        <input type="text">
-    ```
-
-    ```css
-        body {
-            margin: 0;
-            padding: 0;
-        }
-    ```
-
-    ```php
-        <?php phpinfo();?>
-    ```
-
-Пример блока для `C#`:
-
-```C#
-using MarkdownSharp;
-using MarkdownSharp.Extensions.Mal;
-
-Markdown mark = new Markdown();
-
-// Short link for MAL - 
-// http://myanimelist.net/people/413/Kitamura_Eri => mal://Kitamura_Eri
-mark.AddExtension(new Articles()); 
-mark.AddExtension(new Profile());
-
-mark.Transform(text);
-```
-
-Пример блока для `Python`:
-```Python
-from timeit import Timer
-
-tmp = "Python 3.2.2 (default, Jun 12 2011, 15:08:59) [MSC v.1500 32 bit (Intel)] on win32."
-
-def case1(): # А. инкрементальные конкатенации в цикле
-    s = ""
-    for i in range(10000):
-        s += tmp
-
-def case2(): # Б. через промежуточный список и метод join
-    s = []
-    for i in range(10000):
-        s.append(tmp)
-    s = "".join(s)
-
-def case3(): # В. списковое выражение и метод join
-    return "".join([tmp for i in range(10000)])
-
-def case4(): # Г. генераторное выражение и метод join
-    return "".join(tmp for i in range(10000))
-
-for v in range(1,5):
-    print (Timer("func()","from __main__ import case%s as func" % v).timeit(200))
-```
-    
-[:arrow_up:Оглавление](#Оглавление)
-___
-## Списки
-
-#### Маркированный
-Задать **маркированный** список можно несколькими символами `-`, `+` или `*`:
-```
-- Уровень списка 1. Пункт 1.
-- Уровень списка 1. Пункт 2.
-- Уровень списка 1. Пункт 3.
-```
-- Уровень списка 1. Пункт 1.
-- Уровень списка 1. Пункт 2.
-- Уровень списка 1. Пункт 3.
-
-```
-+ Уровень списка 1. Пункт 1.
-+ Уровень списка 1. Пункт 2.
-+ Уровень списка 1. Пункт 3.
-```
-+ Уровень списка 1. Пункт 1.
-+ Уровень списка 1. Пункт 2.
-+ Уровень списка 1. Пункт 3.
-
-```
-* Уровень списка 1. Пункт 1.
-* Уровень списка 1. Пункт 2.
-* Уровень списка 1. Пункт 3.
-```
-* Уровень списка 1. Пункт 1.
-* Уровень списка 1. Пункт 2.
-* Уровень списка 1. Пункт 3.
-
-Можно создавать многоуровневые списки. Каждый уровень отделяется **четырьмя** (4) пробелами:
-```
-- Уровень списка 1. Пункт 1.
-    - Уровень списка 2. Пункт 1.
-- Уровень списка 1. Пункт 2.
-    - Уровень списка 2. Пункт 1.
-    - Уровень списка 2. Пункт 2.
-- Уровень списка 1. Пункт 3.
-    - Уровень списка 2. Пункт 1.
-        - Уровень списка 3. Пункт 1.
-        - Уровень списка 3. Пункт 2.
-           - Уровень списка 4. Пункт 1.
-```
-- Уровень списка 1. Пункт 1.
-  - Уровень списка 2. Пункт 1.
-- Уровень списка 1. Пункт 2.
-    - Уровень списка 2. Пункт 1.
-    - Уровень списка 2. Пункт 2.
-- Уровень списка 1. Пункт 3.
-    - Уровень списка 2. Пункт 1.
-      - Уровень списка 3. Пункт 1.
-      - Уровень списка 3. Пункт 2.
-         - Уровень списка 4. Пункт 1.
-
-Каждый уровень отделяется двумя пробелами.
-
-#### Нумерованный
-Для Githib работа с нумерованными списками выглядит очень интересно. Каждый уровень отделяется **четырьмя** (4) пробелами:
-```
-1. Первый уровень 1
-    1. Второй уровень 1
-        1. Третий уровень 1
-            1. Четвертый уровень 1
-                1. Пятый уровень 1
-                    1. Шестой уровень
-                        1. Седьмой уровень
-                            1. Седьмой уровень
-2. Первый уровень 2
-2. Первый уровень (должно быть 3)
-4. Первый уровень 4
-```
-1. Первый уровень 1
-    1. Второй уровень 1
-        1. Третий уровень 1
-            1. Четвертый уровень 1
-                1. Пятый уровень 1
-                    1. Шестой уровень
-                        1. Седьмой уровень
-                            1. Седьмой уровень
-2. Первый уровень 2
-2. Первый уровень (должно быть 3)
-4. Первый уровень 4
-
-#### Смешанные списки
-При использовании смешанных списков нужно очень внимательно следить за нумерацией. Лучше, как и в нумерованных, использовать четыре (4) пробела для отделения уровня.
-```
-1. Первый уровень "нумерованный" - 1
-    * Второй уровень "маркер"
-        + Третий уровень "маркер"
-        - Третий уровень "маркер"
-        1. Третий уровень "нумерованный" - 1
-            1. Четвертый уровень "нумерованный" - 1
-                1. Пятый уровень "нумерованный" - 1
-                    1. Шестой уровень "нумерованный" - 1
-                        1. Седьмой уровень "нумерованный" - 1
-                        * Седьмой уровень "маркер"
-                        2. Седьмой уровень "нумерованный" - 1 (нарушена нумерация, новая нумерация 1)
-                        3. Седьмой уровень "нумерованный" - 1 (нарушена нумерация, новая нумерация 2)
-                            1. Восьмой уровень "нумерованный" - 1
-2. Первый уровень "нумерованный" - 2
-- Первый уровень "нумерованный" - 3
-4. Первый уровень "нумерованный" - 4 (нарушена нумерация, новая нумерация 1)
-5. Первый уровень "нумерованный" - 5 (нарушена нумерация, новая нумерация 2)
-```
-1. Первый уровень "нумерованный" - 1
-    * Второй уровень "маркер"
-        + Третий уровень "маркер"
-        - Третий уровень "маркер"
-        1. Третий уровень "нумерованный" - 1
-            1. Четвертый уровень "нумерованный" - 1
-                1. Пятый уровень "нумерованный" - 1
-                    1. Шестой уровень "нумерованный" - 1
-                        1. Седьмой уровень "нумерованный" - 1
-                        * Седьмой уровень "маркер"
-                        2. Седьмой уровень "нумерованный" - 2
-                        3. Седьмой уровень "нумерованный" - 3
-                            1. Восьмой уровень "нумерованный" - 1
-2. Первый уровень "нумерованный" - 2
-- Первый уровень "маркерный" - 3
-4. Первый уровень "нумерованный" - 4 (хотя по идее должен быть 3)
-5. Первый уровень "нумерованный" - 5 (хотя, по идее должен быть 3)
-
-#### Список задач
-(Task List)
-Можно создавать "Списки задач" для этого необходимо использовать `- [ ]` для поставленной задачи и `- [X]` для выполненной задачи.
-```
-- [X] Придумать внешний вид резюме
-- [ ] Написать основные категории
-- [X] Опубликовать
-
-```
-- [X] Придумать внешний вид резюме
-- [ ] Написать основные категории
-- [X] Опубликовать
-
-Также можно создавать многоуровневые списки задач. Каждый уровень отделяется **четырьмя** (4) пробелами:
-```
-- [X] Задача 1
-    - [X] Подзадача 1 для Задачи 1
-    - [X] Подзадача 2 для Задачи 1
-- [ ] Задача 2
-    - [X] Подзадача 1 для Задачи 2
-    - [ ] Подзадача 2 для Задачи 2
-- [ ] Задача 3
-    - [ ] Подзадача 1 для Задачи 3
-        - [ ] Подзадача 1 для Подзадача 1 для Задачи 3
-```
-- [X] Задача 1
-    - [X] Подзадача 1 для Задачи 1
-    - [X] Подзадача 2 для Задачи 1
-- [ ] Задача 2
-    - [X] Подзадача 1 для Задачи 2
-    - [ ] Подзадача 2 для Задачи 2
-- [ ] Задача 3
-    - [ ] Подзадача 1 для Задачи 3
-        - [ ] Подзадача 1 для Подзадача 1 для Задачи 3
-    
-[:arrow_up:Оглавление](#Оглавление) 
-___
-## Ссылки
-Либо просто вставить ссылку, либо дополнительно задать текст ссылки (пробела между скобками быть не должно):
-```
-Первый вариант вставки ссылок - это просто написать адрес сайта http://sabaka.net
-```
-Первый вариант вставки ссылок - это просто написать адрес сайта http://sabaka.net
-
-Второй вариант записывается так: `[текст ссылки](адрес ссылки)`
-```
-[sabaka.net](http://sabaka.net)
-```
-[sabaka.net](http://sabaka.net)
-    
-[Sabaka(DOT)Net]:http://sabaka.net    
-    
-[:arrow_up:Оглавление](#Оглавление)
-____
-## Вставка изображения
-```
-![Alt-текст](https://avatars1.githubusercontent.com/u/5384215?v=3&s=460 "Орк")
-```
-![Alt-текст](https://avatars1.githubusercontent.com/u/5384215?v=3&s=460 "Орк")
-
-### Дополнительно:
-#### Вставка ссылки с картинкой на ролик с YouTube
-Описание комбинации `[![Тут текст](адрес до картинки)](ссылка на страничку YouTube)`        
-Пример:        
-```[![Тут текст](https://img.youtube.com/vi/RHPYGwVQB2o/0.jpg)](https://youtu.be/RHPYGwVQB2o)```        
-Что мы увидим:        
-[![Тут текст](https://img.youtube.com/vi/RHPYGwVQB2o/0.jpg)](https://youtu.be/RHPYGwVQB2o)        
-        
-[:arrow_up:Оглавление](#Оглавление) 
-____
-## Вставка таблиц
-```
-| LEFT | CENTER | RIGHT |
-|----------------|:---------:|----------------:|
-| По левому краю | По центру | По правому краю |
-| текст | текст | текст |
-```
-| LEFT | CENTER | RIGHT |
-|----------------|:---------:|----------------:|
-| По левому краю | По центру | По правому краю |
-| текст | текст | текст |
-
-**Внимание:** Если в тексте таблицы нужно использовать символ "вертикальная черта - `|`", то в место него необходимо написать замену на комбинацию HTML-кода* `&#124;`, это нужно для того, что бы таблица не потеряла ориентации.    
-*) - Можно использовать ASCII и/или UTF коды.
-
-**Пример:**
-```
-| Обозначение | Описание | Пример регулярного выражения|
-|----:|:----:|:----------|
-| literal | Строка содержит символьный литерал literal | foo |
-| re1&#124;re2 | Строка содержит регулярные выражения `rel` или `re2` | foo&#124;bar |
-```
-**Результат:**
-
-| Обозначение | Описание | Пример регулярного выражения|
-|----:|:----:|:----------|
-| literal | Строка содержит символьный литерал literal | foo |
-| re1&#124;re2 | Строка содержит регулярные выражения `rel` или `re2` | foo&#124;bar |
-
-[:arrow_up:Оглавление](#Оглавление) 
-____
-## Диаграмм Mermaid.js
-Появилась возможность вставлять диаграммы [Mermaid.js](https://mermaid-js.github.io/mermaid/#/)
-
-<pre>
-```mermaid
-... код диаграммы ...
-```
-</pre>
-Пример:
-<pre>
-```mermaid
-erDiagram
-    CUSTOMER ||--o{ ORDER : places
-    ORDER ||--|{ LINE-ITEM : contains
-    CUSTOMER }|..|{ DELIVERY-ADDRESS : uses
-```
-</pre>
-```mermaid
-erDiagram
-    CUSTOMER ||--o{ ORDER : places
-    ORDER ||--|{ LINE-ITEM : contains
-    CUSTOMER }|..|{ DELIVERY-ADDRESS : uses
-```
-Очень подробно на русском языке о диаграммах Mermaid.js: https://habr.com/ru/post/652867/ 
-
-[:arrow_up:Оглавление](#Оглавление) 
-____
+- 🔭 I’m currently working on ...
+- 🌱 I’m currently learning ...
+- 👯 I’m looking to collaborate on ...
+- 🤔 I’m looking for help with ...
+- 💬 Ask me about ...
+- 📫 How to reach me: ...
+- 😄 Pronouns: ...
+- ⚡ Fun fact: ...
+-->
