@@ -1,1 +1,1 @@
-#3776AB
+https://simpleicons.org/icons/python.svg
